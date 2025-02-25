@@ -20,7 +20,7 @@ pids
 lib-cov
 
 # Coverage directory used by tools like istanbul
-coverage
+coverage/
 *.lcov
 
 # nyc test coverage
@@ -79,7 +79,7 @@ web_modules/
 .env.production.local
 .env.local
 
-# parcel-bundler cache (https://parceljs.org/)
+# Parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache
 
@@ -89,7 +89,7 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+dist/
 
 # Gatsby files
 .cache/
@@ -128,3 +128,24 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+### Angular-specific additions
+# Angular build outputs
+dist/
+out-tsc/
+tmp/
+
+# Angular environment files (prevent API keys from leaking)
+src/environments/environment*.ts
+
+# VSCode settings and workspace files
+.vscode/
+*.code-workspace
+
+# Compiled TypeScript files
+*.js
+*.js.map
+*.d.ts
+
+# Firebase-related files (if using Firebase)
+.firebase/
