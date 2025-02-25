@@ -7,11 +7,11 @@ import { Vehicle } from '../models/vehicle';
 })
 
 export class VehicleService {
-    
+
   private vehicles: Vehicle[] = [
-    { price: 1000000, make: 'Suzuki', model: 'Swift', body: 'Sedan', imageUrl: '../../assets/images/suzuki_swift.png' },
-    { price: 850000, make: 'Ford', model: 'Figo', body: 'Hatchback', imageUrl: '../../assets/images/ford_figo.webp' },
-    { price: 700000, make: 'Toyota', model: 'Fortuner', body: 'SUV', imageUrl: '../../assets/images/toyota_fortuner.avif' }
+    { price: 300000, make: 'Suzuki', model: 'Swift', body: 'Sedan', imageUrl: '../../assets/images/suzuki_swift.png' },
+    { price: 550000, make: 'Ford', model: 'Figo', body: 'Hatchback', imageUrl: '../../assets/images/ford_figo.webp' },
+    { price: 1000000, make: 'Toyota', model: 'Fortuner', body: 'SUV', imageUrl: '../../assets/images/toyota_fortuner.avif' }
   ];
 
   vehicles$ = of(this.vehicles);

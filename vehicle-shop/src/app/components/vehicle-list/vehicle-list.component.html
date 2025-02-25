@@ -1,1 +1,4 @@
-<p>vehicle-list works!</p>
+<div class="vehicle-list">
+    <div *ngFor="let vehicle of (vehicles$ | async)">{{vehicle.make}}</div>
+  </div>
+  

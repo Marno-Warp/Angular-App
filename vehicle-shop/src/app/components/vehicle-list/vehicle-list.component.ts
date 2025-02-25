@@ -1,11 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { VehicleService } from '../../services/vehicle.service';
+import { Vehicle } from '../../models/vehicle';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-vehicle-list',
-  imports: [],
   templateUrl: './vehicle-list.component.html',
-  styleUrl: './vehicle-list.component.scss'
+  styleUrls: ['./vehicle-list.component.scss'],
+  standalone: true,
+  imports: [CommonModule]
 })
-export class VehicleListComponent {
+export class VehicleListComponent implements OnInit {
+  vehicles$!: Observable<Vehicle[]>;
 
+  constructor(private vehicleService: VehicleService) {}
+
+  ngOnInit(): void {
+    this.vehicles$ = this.vehicleService.getVehicles();
+  }
 }
