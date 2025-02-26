@@ -1,0 +1,13 @@
+.vehicle-card {
+    width: 300px;
+  }
+  
+  .vehicle-image {
+    height: 200px; /* Set a fixed height for the images */
+    width: 100px;
+    object-fit: cover; /* Ensure the image covers the available space */
+    background-color: white; /* Set a white background */
+    width: 100%; /* Ensure the image takes the full width of the container */
+  }  
+
+
