@@ -1,7 +1,40 @@
-.vehicle-list {
+.header-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; 
   }
   
+  .vehicle-list-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+    align-items: stretch; 
+  }
+  
+  .filters {
+    flex: 1; 
+  }
+  
+  .vehicle-list {
+    flex: 3; 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .vehicle-card {
+    flex: 1 1 calc(33.333% - 20px); 
+    box-sizing: border-box;
+  }
+
+
+  .main-container {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+  }
+
+  .vehicle-header-container {
+    padding-left: 3px;
+    padding-bottom: 30px;
+  }

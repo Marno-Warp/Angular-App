@@ -1,3 +1,11 @@
-<div class="vehicle-list">
-  <app-vehicle-card *ngFor="let vehicle of (vehicles$ | async)" [vehicle]="vehicle"></app-vehicle-card>
+<div class="main-container">
+  <h1 class="vehicle-header-container">Browse Vehicles</h1>
+
+  <div class="vehicle-list-container">
+    <app-vehicle-filters class="filters" (filterChanged)="onFilterChange($event)"></app-vehicle-filters>
+
+    <div class="vehicle-list">
+      <app-vehicle-card *ngFor="let vehicle of (vehicles$ | async)" [vehicle]="vehicle"></app-vehicle-card>
+    </div>
+  </div>
 </div>

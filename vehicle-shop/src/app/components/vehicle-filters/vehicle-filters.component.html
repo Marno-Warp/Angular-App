@@ -1,1 +1,32 @@
-<p>vehicle-filters works!</p>
+<mat-card class="filter-card">
+    <mat-card-content>
+      <h3>Filters</h3>
+      <mat-form-field appearance="fill">
+        <mat-label>Manufacturer</mat-label>
+        <mat-select [(ngModel)]="selectedManufacturer" (selectionChange)="applyFilters()">
+          <mat-option *ngFor="let manufacturer of manufacturers" [value]="manufacturer">
+            {{ manufacturer }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Body Style</mat-label>
+        <mat-select [(ngModel)]="selectedBodyStyle" (selectionChange)="applyFilters()">
+          <mat-option *ngFor="let body of bodyStyles" [value]="body">
+            {{ body }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Price Range</mat-label>
+        <mat-select [(ngModel)]="selectedPriceRange" (selectionChange)="applyFilters()">
+          <mat-option *ngFor="let range of priceRanges" [value]="range">
+            {{ range.label }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card-content>
+  </mat-card>
+  
