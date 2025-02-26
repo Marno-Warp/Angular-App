@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Vehicle } from '../../models/vehicle';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-vehicle-card',
-  imports: [],
   templateUrl: './vehicle-card.component.html',
-  styleUrl: './vehicle-card.component.scss'
+  styleUrls: ['./vehicle-card.component.scss'],
+  imports: [MatCardModule, MatButtonModule, CommonModule],
 })
 export class VehicleCardComponent {
-
+  @Input() vehicle!: Vehicle;
 }

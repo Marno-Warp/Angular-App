@@ -1,4 +1,3 @@
 <div class="vehicle-list">
-    <div *ngFor="let vehicle of (vehicles$ | async)">{{vehicle.make}}</div>
-  </div>
-  
+  <app-vehicle-card *ngFor="let vehicle of (vehicles$ | async)" [vehicle]="vehicle"></app-vehicle-card>
+</div>

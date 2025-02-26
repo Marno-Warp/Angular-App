@@ -1,1 +1,13 @@
-<p>vehicle-card works!</p>
+<mat-card class="vehicle-card">
+    <img mat-card-image [src]="vehicle.imageUrl" alt="Vehicle Image" />
+    <mat-card-content>
+      <p><strong>Price:</strong> R {{ vehicle.price | number }}</p>
+      <p><strong>Make:</strong> {{ vehicle.make }}</p>
+      <p><strong>Model:</strong> {{ vehicle.model }}</p>
+      <p><strong>Body:</strong> {{ vehicle.body }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button color="primary">Add to Cart</button>
+    </mat-card-actions>
+  </mat-card>
+  
