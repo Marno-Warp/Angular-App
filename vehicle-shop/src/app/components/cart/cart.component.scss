@@ -1,9 +1,7 @@
-.cart-card {
-    width: 300px;
-    padding: 16px;
-  }
-  mat-list-item {
+.cart-item {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 5px 0;
   }
   

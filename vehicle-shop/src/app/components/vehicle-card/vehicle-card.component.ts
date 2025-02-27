@@ -3,6 +3,7 @@ import { Vehicle } from '../../models/vehicle';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule} from '@angular/common';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-vehicle-card',
@@ -12,4 +13,10 @@ import { CommonModule} from '@angular/common';
 })
 export class VehicleCardComponent {
   @Input() vehicle!: Vehicle;
+
+  constructor(private cartService: CartService) {}
+
+  addToCart() {
+    this.cartService.addToCart(this.vehicle);
+  }
 }
