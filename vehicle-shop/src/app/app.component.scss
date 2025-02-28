@@ -1,5 +1,7 @@
 .main-container {
     display: flex;
+    height: 100vh; 
+
     gap: 20px; 
 
     padding-left: 100px;
@@ -7,10 +9,37 @@
     padding-top: 50px;
   }
   
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  mat-sidenav-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+  
+  mat-sidenav {
+    width: 300px; 
+  }
+  
+  mat-sidenav-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px; 
+  }
+  
   app-vehicle-list {
-    flex: 3; 
+    flex: 3;
   }
   
   app-cart {
-    flex: 1; 
+    flex: 1;
+  }
+
+  .header-container {
+    padding-left: 120px;
+    padding-right: 120px;
+    border-bottom: 2px solid #ccc; 
   }

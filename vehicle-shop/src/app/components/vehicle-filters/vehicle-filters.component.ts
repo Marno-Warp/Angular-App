@@ -13,9 +13,9 @@ import { CommonModule } from '@angular/common';
     FormsModule, CommonModule],
 })
 export class VehicleFiltersComponent {
-  manufacturers: string[] = ['Any', 'Suzuki', 'Ford', 'Toyota'];
+  manufacturers: string[] = ['Any', 'Suzuki', 'Ford', 'Toyota', 'BMW', 'Mazda', 'Hyundai'];
   bodyStyles: string[] = ['Any', 'Sedan', 'SUV', 'Hatchback'];
-  
+
   priceRanges = [
     { label: 'Any', min: 0, max: 10000000 },
     { label: 'Under R500,000', min: 0, max: 500000 },

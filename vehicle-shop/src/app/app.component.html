@@ -1,4 +1,14 @@
-<div class="main-container">
-    <app-vehicle-list></app-vehicle-list>
-    <app-cart></app-cart>
-  </div>
+<mat-toolbar color="primary" class="header-container">
+    <span>Vehicle Shop</span>
+    <span class="spacer"></span>
+    <button mat-button (click)="toggleCart()">Cart</button>
+  </mat-toolbar>
+  
+  <mat-sidenav-container class="main-container">
+    <mat-sidenav #sidenav mode="side" [(opened)]="isCartOpen" position="end">
+      <app-cart></app-cart>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <app-vehicle-list></app-vehicle-list>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
