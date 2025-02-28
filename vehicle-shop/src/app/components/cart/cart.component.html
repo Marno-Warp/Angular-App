@@ -5,7 +5,7 @@
     <mat-card-content>
       <div *ngIf="(cart$ | async)?.length; else emptyCart">
         <div *ngFor="let vehicle of (cart$ | async)" class="cart-item">
-            <span>{{ vehicle.make }} {{ vehicle.model }} - R{{ vehicle.price }}</span>
+            <span>{{ vehicle.make }} {{ vehicle.model }} - R{{ vehicle.price | number }}</span>
             <button mat-icon-button color="warn" (click)="removeFromCart(vehicle.id)" class="remove-button">
               <mat-icon>delete</mat-icon>
             </button>
